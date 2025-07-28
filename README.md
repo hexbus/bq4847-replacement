@@ -41,9 +41,8 @@ This design has not yet been tested in hardware. Boards are on order and manual 
 |--------------------------|--------------------------------------------------|------------------|-------------|
 | PCB                      | Found in `gerbers.zip` in this repo              | —                | —           |
 | BQ4802Y RTC chip         | Main RTC IC                                      | ~$6.25           | [Mouser](https://www.mouser.com/ProductDetail/Texas-Instruments/BQ4802YPW?qs=YxwvVplHM%2FnrYmh0JbPldA%3D%3D) |
-| 32.768 kHz Crystal       | Standard watch crystal for RTC                   | $0.20–$0.40      | Mouser       |
-| 5K Resistor              | Pull-up resistor                                 | ~$0.10           | Mouser       |
-| CR2032 Battery Holder    | XH 2-pin compatible                              | ~$0.25–$1.00     | Various      |
+| 32.768 kHz Crystal       | Standard watch crystal for RTC - 8mm tall        | $0.20–$0.40      | Mouser       |
+| 5K Resistor              | Pull-up resistor - 1/4W 5%                       | ~$0.10           | Mouser       |
 | Round Pin Headers        | For DIP socket compatibility                     | ~$0.50           | Various      |
 | XH 2 pin 2.54mm header   | For hooking up 3V battery & holder (male/female) | $1.00/ea         | [Various - Example](https://www.amazon.com/JST-XH-2-54mm-Connector-Silicone-Cables/dp/B0D6KSMK1Q/) |
 | Battery holder - CR2032  | Battery holder w/switch & CR2032 - Backup        | $2.00/ea         | [Various - Example](https://www.amazon.com/LAMPVPATH-cr2032-Battery-Holder-CR2032/dp/B07BXDHT4B) |
