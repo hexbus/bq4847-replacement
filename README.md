@@ -15,6 +15,7 @@ Maintains full functionality with modern, readily available components.
 - [Project Status](#project-status)
 - [Bill of Materials (BOM)](#bill-of-materials-bom)
 - [Installation Instructions](#installation-instructions)
+  - [TI-99/4A IDE Card](#BQ4802-Clock-Installation-for-the-TI-99/4A-IDE-Card)
 - [License](#license)
 - [Author](#author)
 
