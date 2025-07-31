@@ -45,9 +45,56 @@ This design has not yet been tested in hardware. Boards are on order and manual 
 | 5K Resistor              | Pull-up resistor - 1/4W 5%                       | ~$0.10           | Mouser       |
 | Round Pin Headers        | For DIP socket compatibility                     | ~$0.50           | Various      |
 | XH 2 pin 2.54mm header   | For hooking up 3V battery & holder (male/female) | $1.00/ea         | [Various - Example](https://www.amazon.com/JST-XH-2-54mm-Connector-Silicone-Cables/dp/B0D6KSMK1Q/) |
-| Battery holder - CR2032  | Battery holder w/switch & CR2032 - Backup        | $2.00/ea         | [Various - Example](https://www.amazon.com/LAMPVPATH-cr2032-Battery-Holder-CR2032/dp/B07BXDHT4B) |
+| Battery holder - CR2032  | Battery holder w/switch & CR2032 - Backup        | $2.00/ea         | [Various - Example](https://www.amazon.com/Alinan-Button-Battery-Storage-Container/dp/B09KTVG1Y5) |
 
 ---
+
+# BQ4802 Clock Installation Instructions for the TI-99/4A IDE Card
+
+1. **Remove the original BQ4852**  
+   Carefully remove the original clock chip and SRAM from IC27 by pulling straight up.
+
+2. **Install SRAM**  
+   Ensure a [512Kx8 SRAM chip](https://www.mouser.com/ProductDetail/727-CY2148ELL45ZSXIT) is installed at IC23.
+
+3. **Install Capacitors**  
+   Make sure two 0805 SMD capacitors are installed:
+   - **C23** — for the SRAM
+   - **C25** — for the new clock chip (BQ4802)
+
+4. **Insert the BQ4802 Clock Chip**  
+   Place the BQ4802 into the BQ4847 socket:
+   - Align the dot on the BQ4802 with the cutout on the silkscreen (facing C25 and the top edge of the IDE card).
+   - The crystal and resistor should be located above the BQ4802 chip.
+
+5. **Attach the Battery**  
+   - Connect the battery to the 2-pin connector, observing polarity (**+ is on the left**, per silkscreen).
+   - Mount the battery holder nearby using double-stick tape.
+   - Leave the battery switch **OFF** for now.
+
+6. **Set the IDE Switch**  
+   - Turn the primary IDE switch (rear of the card) to the **OFF** position (usually the middle setting).
+
+7. **Power On System**  
+   - Power on your **Perhipheral Expansion System**.
+   - Power on your **TI-99/4A** and wait for the Master Title Screen.
+   - Flip the IDE card switch to **TI** (if using a TI system).
+
+8. **Load the DSR**  
+   - Run `IDELOAD` to detect and load the DSR.
+
+9. **Verify Battery Backup**  
+   - If successful:
+     - Turn the **battery switch ON**
+     - Power down and back up.
+     - Run `CALL IDEST` or `CALL IDETD` in BASIC to check if date/time was retained.
+
+10. **Troubleshooting**  
+    - If unsuccessful:
+      - Double-check all connections.
+      - Use a multimeter to verify continuity.
+      - Confirm that the DSR is still loaded.
+      - Use Community Support forums such as the [TI-99/4A Forum](https://forums.atariage.com/forum/164-ti-994a-computers/) on AtariAge for assistance.
 
 ## License
 
