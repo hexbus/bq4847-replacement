@@ -93,8 +93,8 @@ If you're installing a clock chip **without built-in SRAM**, you'll need to popu
    - Align the dot on the chip with the notch in the silkscreen (facing **C25** and the top edge of the IDE card).
    - The crystal and resistor should be installed just above the chip.
 
-5. **Attach and Secure the Battery**  
-   - Connect a CR2032 battery to the 2-pin XH header.
+5. **Attach and Secure the [Battery Holder](https://www.amazon.com/Alinan-Button-Battery-Storage-Container/dp/B09KTVG1Y5?th=1)**  
+   - Connect a CR2032 battery holder to the 2-pin XH 2.54mm female header and insulate appropriately.
    - Ensure correct polarity (**+ on the left**, per the silkscreen).
    - Mount the battery holder securely nearby using double-sided tape.
    - Leave the **battery switch OFF** during initial testing.
