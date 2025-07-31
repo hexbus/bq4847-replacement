@@ -71,7 +71,7 @@ This design has not yet been tested in hardware. Boards are on order and manual 
 
 Many early TI-99/4A IDE cards were populated with the **BQ4852**, a combination real-time clock (RTC) and 512K SRAM chip with an internal, non-replaceable battery. At this point, most of these batteries are long dead.
 
-These instructions assume you're replacing the BQ4852 with a modern alternative using one of the other supported clock headers on the IDE card—most commonly the **BQ4802** in the **BQ4847-compatible socket**. Unlike the BQ4852, the BQ4802 (and most other supported options) do **not** include integrated SRAM. To maintain compatibility, the card’s original designer included a footprint at **IC23** to add external 512K SRAM.
+These instructions assume you're replacing the BQ4852 with a modern alternative (the one from this repo) using the other supported clock header on the IDE card—the **BQ4802** in the **BQ4847-compatible socket**. Unlike the BQ4852, the BQ4802 (and most other supported options) do **not** include integrated SRAM. To maintain compatibility, the card’s original designer included a footprint at **IC23** to add external 512K SRAM.
 
 If you're installing a clock chip **without built-in SRAM**, you'll need to populate IC23 with a compatible SRAM chip. The following steps walk through the full replacement process.
 
