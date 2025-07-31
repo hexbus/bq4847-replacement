@@ -1,7 +1,22 @@
-# bq4847-replacement
+# BQ4847 Replacement Module
 
 **Drop-in replacement for the BQ4847Y DIP RTC chip using the BQ4802Y for 5V legacy systems.**  
 Maintains full functionality with modern, readily available components.
+
+---
+
+## Table of Contents
+
+- [Overview](#overview)
+- [Photos](#photos)
+  - [Assembled Replacement Module](#assembled-replacement-module)
+  - [BQ4802Y Module (Modern)](#bq4802y-module-modern)
+  - [BQ4847Y Chip (Original)](#bq4847y-chip-original)
+- [Project Status](#project-status)
+- [Bill of Materials (BOM)](#bill-of-materials-bom)
+- [Installation Instructions](#installation-instructions)
+- [License](#license)
+- [Author](#author)
 
 ---
 
@@ -42,14 +57,16 @@ This design has not yet been tested in hardware. Boards are on order and manual 
 | PCB                      | Found in `gerbers.zip` in this repo              | —                | —           |
 | BQ4802Y RTC chip         | Main RTC IC                                      | ~$6.25           | [Mouser](https://www.mouser.com/ProductDetail/Texas-Instruments/BQ4802YPW?qs=YxwvVplHM%2FnrYmh0JbPldA%3D%3D) |
 | 32.768 kHz Crystal       | Standard watch crystal for RTC - 8mm tall        | $0.20–$0.40      | Mouser       |
-| 5K Resistor              | Pull-up resistor - 1/4W 5%                       | ~$0.10           | Mouser       |
+| 5K Resistor              | Pull-up resistor - 1/4W 5%                        | ~$0.10           | Mouser       |
 | Round Pin Headers        | For DIP socket compatibility                     | ~$0.50           | Various      |
-| XH 2 pin 2.54mm header   | For hooking up 3V battery & holder (male/female) | $1.00/ea         | [Various - Example](https://www.amazon.com/JST-XH-2-54mm-Connector-Silicone-Cables/dp/B0D6KSMK1Q/) |
-| Battery holder - CR2032  | Battery holder w/switch & CR2032 - Backup        | $2.00/ea         | [Various - Example](https://www.amazon.com/Alinan-Button-Battery-Storage-Container/dp/B09KTVG1Y5) |
+| XH 2 pin 2.54mm header   | For hooking up 3V battery & holder (male/female) | $1.00/ea         | [Example](https://www.amazon.com/JST-XH-2-54mm-Connector-Silicone-Cables/dp/B0D6KSMK1Q/) |
+| Battery holder - CR2032  | Battery holder w/switch & CR2032 - Backup        | $2.00/ea         | [Example](https://www.amazon.com/Alinan-Button-Battery-Storage-Container/dp/B09KTVG1Y5) |
 
 ---
 
-# BQ4802 Clock Installation Instructions for the TI-99/4A IDE Card
+## Installation Instructions
+
+### BQ4802 Clock Installation for the TI-99/4A IDE Card
 
 1. **Remove the original BQ4852**  
    Carefully remove the original clock chip and SRAM from IC27 by pulling straight up.
@@ -76,7 +93,7 @@ This design has not yet been tested in hardware. Boards are on order and manual 
    - Turn the primary IDE switch (rear of the card) to the **OFF** position (usually the middle setting).
 
 7. **Power On System**  
-   - Power on your **Perhipheral Expansion System**.
+   - Power on your **Peripheral Expansion System**.
    - Power on your **TI-99/4A** and wait for the Master Title Screen.
    - Flip the IDE card switch to **TI** (if using a TI system).
 
@@ -94,11 +111,13 @@ This design has not yet been tested in hardware. Boards are on order and manual 
       - Double-check all connections.
       - Use a multimeter to verify continuity.
       - Confirm that the DSR is still loaded.
-      - Use Community Support forums such as the [TI-99/4A Forum](https://forums.atariage.com/forum/164-ti-994a-computers/) on AtariAge for assistance.
+      - Use community forums such as the [TI-99/4A Forum on AtariAge](https://forums.atariage.com/forum/164-ti-994a-computers/) for assistance.
+
+---
 
 ## License
 
-This project is open hardware. You are free to use, modify, and distribute it, ideally with attribution.  Please see the license file in this repo.
+This project is open hardware. You are free to use, modify, and distribute it, ideally with attribution. Please see the license file in this repo.
 
 ---
 
