@@ -84,7 +84,7 @@ If you're installing a clock chip **without built-in SRAM**, you'll need to popu
    Populate **IC23** with a [512Kx8 SRAM chip](https://www.mouser.com/ProductDetail/727-CY2148ELL45ZSXIT).
 
 3. **Install Required Capacitors**  
-   Solder two 0805 surface-mount capacitors:
+   Solder two [0805 0.1uf surface-mount capacitors](https://www.mouser.com/ProductDetail/KEMET/C0805C104M5RAC7210?qs=sGAEpiMZZMvsSlwiRhF8qsKzCboK%252BzaMcQGghezj1XY%3D):
    - **C23** — decoupling for the SRAM at IC23
    - **C25** — decoupling for the new clock chip at the BQ4847 socket
 
