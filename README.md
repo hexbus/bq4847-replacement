@@ -88,8 +88,8 @@ If you're installing a clock chip **without built-in SRAM**, you'll need to popu
    - **C23** — decoupling for the SRAM at IC23
    - **C25** — decoupling for the new clock chip at the BQ4847 socket
 
-4. **Insert the BQ4802 Clock Chip**  
-   Insert the BQ4802 into the **BQ4847 socket**:
+4. **Insert the BQ4802 Clock Chip Assembly**  
+   Insert the BQ4802 Kit Assembly into the **BQ4847 socket**:
    - Align the dot on the chip with the notch in the silkscreen (facing **C25** and the top edge of the IDE card).
    - The crystal and resistor should be installed just above the chip.
 
