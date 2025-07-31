@@ -15,7 +15,7 @@ Maintains full functionality with modern, readily available components.
 - [Project Status](#project-status)
 - [Bill of Materials (BOM)](#bill-of-materials-bom)
 - [Installation Instructions](#installation-instructions)
-  - [TI-99/4A IDE Card](#BQ4802-Clock-Installation-for-the-TI-99/4A-IDE-Card)
+  - [TI-99/4A IDE Card](#bq4852-ti99-ide-card)
 - [License](#license)
 - [Author](#author)
 
@@ -67,7 +67,7 @@ This design has not yet been tested in hardware. Boards are on order and manual 
 
 ## Installation Instructions
 
-### BQ4802 Clock Installation for the TI-99/4A IDE Card
+### BQ4852 TI99 IDE Card
 
 1. **Remove the original BQ4852**  
    Carefully remove the original clock chip and SRAM from IC27 by pulling straight up.
