@@ -109,7 +109,8 @@ If you're installing a clock chip **without built-in SRAM**, you'll need to popu
 
 8. **Load the IDE DSR**  
    - Run `IDELOAD` to detect and initialize the IDE card’s DSR (Device Service Routine).
-
+   - The best way to load the DSR is via the 64K cartridge image (loaded in a FinalGROM, FlashROM99, UberGROM, or Guidry 64K cartridge board).  This binary is located in the idedsr_v17.zip as of the writing of this readme, [on this page.](https://hexbus.com/ti99geek/Projects/idedsr/idedsr.html#idedsr)
+    
 9. **Test Battery Backup Functionality**  
    - If the DSR loads successfully:
      - Turn the **battery switch ON**.
