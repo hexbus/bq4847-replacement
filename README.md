@@ -69,50 +69,59 @@ This design has not yet been tested in hardware. Boards are on order and manual 
 
 ### BQ4852 TI99 IDE Card
 
-1. **Remove the original BQ4852**  
-   Carefully remove the original clock chip and SRAM from IC27 by pulling straight up.
+Many early TI-99/4A IDE cards were populated with the **BQ4852**, a combination real-time clock (RTC) and 512K SRAM chip with an internal, non-replaceable battery. At this point, most of these batteries are long dead.
 
-2. **Install SRAM**  
-   Ensure a [512Kx8 SRAM chip](https://www.mouser.com/ProductDetail/727-CY2148ELL45ZSXIT) is installed at IC23.
+These instructions assume you're replacing the BQ4852 with a modern alternative using one of the other supported clock headers on the IDE card—most commonly the **BQ4802** in the **BQ4847-compatible socket**. Unlike the BQ4852, the BQ4802 (and most other supported options) do **not** include integrated SRAM. To maintain compatibility, the card’s original designer included a footprint at **IC23** to add external 512K SRAM.
 
-3. **Install Capacitors**  
-   Make sure two 0805 SMD capacitors are installed:
-   - **C23** — for the SRAM
-   - **C25** — for the new clock chip (BQ4802)
+If you're installing a clock chip **without built-in SRAM**, you'll need to populate IC23 with a compatible SRAM chip. The following steps walk through the full replacement process.
+
+---
+
+1. **Remove the Original BQ4852**  
+   Carefully remove the BQ4852 from **IC27** by pulling it straight up. This removes both the clock and built-in SRAM.
+
+2. **Install External SRAM**  
+   Populate **IC23** with a [512Kx8 SRAM chip](https://www.mouser.com/ProductDetail/727-CY2148ELL45ZSXIT).
+
+3. **Install Required Capacitors**  
+   Solder two 0805 surface-mount capacitors:
+   - **C23** — decoupling for the SRAM at IC23
+   - **C25** — decoupling for the new clock chip at the BQ4847 socket
 
 4. **Insert the BQ4802 Clock Chip**  
-   Place the BQ4802 into the BQ4847 socket:
-   - Align the dot on the BQ4802 with the cutout on the silkscreen (facing C25 and the top edge of the IDE card).
-   - The crystal and resistor should be located above the BQ4802 chip.
+   Insert the BQ4802 into the **BQ4847 socket**:
+   - Align the dot on the chip with the notch in the silkscreen (facing **C25** and the top edge of the IDE card).
+   - The crystal and resistor should be installed just above the chip.
 
-5. **Attach the Battery**  
-   - Connect the battery to the 2-pin connector, observing polarity (**+ is on the left**, per silkscreen).
-   - Mount the battery holder nearby using double-stick tape.
-   - Leave the battery switch **OFF** for now.
+5. **Attach and Secure the Battery**  
+   - Connect a CR2032 battery to the 2-pin XH header.
+   - Ensure correct polarity (**+ on the left**, per the silkscreen).
+   - Mount the battery holder securely nearby using double-sided tape.
+   - Leave the **battery switch OFF** during initial testing.
 
-6. **Set the IDE Switch**  
-   - Turn the primary IDE switch (rear of the card) to the **OFF** position (usually the middle setting).
+6. **Set the IDE Card Switch**  
+   - Set the rear **IDE switch** to the **OFF** position (usually the center setting).
 
-7. **Power On System**  
-   - Power on your **Peripheral Expansion System**.
+7. **Power On the System**  
+   - Power on your **Peripheral Expansion System (PEB)**.
    - Power on your **TI-99/4A** and wait for the Master Title Screen.
-   - Flip the IDE card switch to **TI** (if using a TI system).
+   - Flip the IDE card’s switch to **TI** (if using a TI-compatible configuration).
 
-8. **Load the DSR**  
-   - Run `IDELOAD` to detect and load the DSR.
+8. **Load the IDE DSR**  
+   - Run `IDELOAD` to detect and initialize the IDE card’s DSR (Device Service Routine).
 
-9. **Verify Battery Backup**  
-   - If successful:
-     - Turn the **battery switch ON**
-     - Power down and back up.
-     - Run `CALL IDEST` or `CALL IDETD` in BASIC to check if date/time was retained.
+9. **Test Battery Backup Functionality**  
+   - If the DSR loads successfully:
+     - Turn the **battery switch ON**.
+     - Power down the system, then power it back up.
+     - In BASIC, run `CALL IDEST` or `CALL IDETD` to verify the date and time were retained.
 
-10. **Troubleshooting**  
-    - If unsuccessful:
-      - Double-check all connections.
-      - Use a multimeter to verify continuity.
-      - Confirm that the DSR is still loaded.
-      - Use community forums such as the [TI-99/4A Forum on AtariAge](https://forums.atariage.com/forum/164-ti-994a-computers/) for assistance.
+10. **Troubleshooting Tips**  
+    - If the DSR does not load or the clock fails to retain time:
+      - Recheck all IC placements and capacitor installations.
+      - Use a multimeter to verify connectivity and power.
+      - Confirm the DSR is still present by rerunning `IDELOAD`.
+      - Seek help via community resources like the [TI-99/4A Forum on AtariAge](https://forums.atariage.com/forum/164-ti-994a-computers/).
 
 ---
 
