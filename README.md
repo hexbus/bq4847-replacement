@@ -23,7 +23,7 @@ Maintains full functionality with modern, readily available components.
 
 ## Overview
 
-Many legacy computer systems used the BQ4847 real-time clock (RTC) chip—an integrated lithium coin-cell battery-backed chip with a typical 10-year lifespan. Today, most of these original chips are well beyond their intended service life.
+Many legacy computer systems used the BQ4847 real-time clock (RTC) chip—an integrated lithium coin-cell battery-backed chip with a typical 10-year lifespan. Today, most of thee original chips are well beyond their intended service life.
 
 This project provides a drop-in replacement using the newer BQ4802Y clock chip. It includes support for a replaceable 3V CR2032 battery via an XH 2-pin connector. Note that while the original BQ4847 supported an external 512K SRAM module, this project does **not** include that memory. However, the BQ4802Y can still manage external SRAM if present.
 
@@ -71,7 +71,7 @@ This design has not yet been tested in hardware. Boards are on order and manual 
 
 Many early TI-99/4A IDE cards were populated with the **BQ4852**, a combination real-time clock (RTC) and 512K SRAM chip with an internal, non-replaceable battery. At this point, most of these batteries are long dead.
 
-These instructions assume you're replacing the BQ4852 with a modern alternative (the one from this repo) using the other supported clock header on the IDE card—the **BQ4802** in the **BQ4847-compatible socket**. Unlike the BQ4852, the BQ4802 (and most other supported options) do **not** include integrated SRAM. To maintain compatibility, the card’s original designer included a footprint at **IC23** to add external 512K SRAM.
+These instructions assume you're replacing the BQ4852 with a modern alternative (the one from this repo) using the other supported clock header on the IDE card—the **BQ4802** in the **BQ4847-compatible socket**. Unlike the BQ4852, the BQ4802 (and most other supported options) do **not** include integrated SRAM. To maintain compatibility, the card’s [original designer](https://www.unige.ch/medecine/nouspikel/ti99/ide2.htm) included a footprint at **IC23** to add external 512K SRAM.
 
 If you're installing a clock chip **without built-in SRAM**, you'll need to populate IC23 with a compatible SRAM chip. The following steps walk through the full replacement process.
 
@@ -121,6 +121,7 @@ If you're installing a clock chip **without built-in SRAM**, you'll need to popu
       - Recheck all IC placements and capacitor installations.
       - Use a multimeter to verify connectivity and power.
       - Confirm the DSR is still present by rerunning `IDELOAD`.
+      - Make sure you have the current version of the IDE DSR, and follow the troubleshooting steps [here](https://hexbus.com/ti99geek/Projects/idedsr/idedsr.html#idedsr).
       - Seek help via community resources like the [TI-99/4A Forum on AtariAge](https://forums.atariage.com/forum/164-ti-994a-computers/).
 
 ---
